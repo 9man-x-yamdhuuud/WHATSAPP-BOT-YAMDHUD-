@@ -1,0 +1,16 @@
+{
+  "name": "ultimate-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "Full WhatsApp AI Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.6.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "ytdl-core": "^4.11.0"
+  }
+}
