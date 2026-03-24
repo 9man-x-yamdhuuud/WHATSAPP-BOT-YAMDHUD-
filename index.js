@@ -73,12 +73,16 @@ async function startBot() {
             })
         }
 
-        // ================= SONG =================
-        else if (body.startsWith(".song")) {
-            let q = body.replace(".song ", "")
-            let res = await axios.get(`https://yt-api.p.rapidapi.com/search?query=${q}`, {
-                headers: { "X-RapidAPI-Key": "YOUR_RAPIDAPI_KEY" }
-            })
+        // ================= SONG (FREE) =================
+else if (body.startsWith(".song")) {
+    let query = body.replace(".song ", "")
+
+    let url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`
+
+    sock.sendMessage(from, {
+        text: `🎵 Search Result:\n${url}`
+    })
+}
 
             let v = res.data.data[0]
             sock.sendMessage(from, {
