@@ -83,13 +83,6 @@ else if (body.startsWith(".song")) {
         text: `🎵 Search Result:\n${url}`
     })
 }
-
-            let v = res.data.data[0]
-            sock.sendMessage(from, {
-                text: `${v.title}\nhttps://youtube.com/watch?v=${v.videoId}`
-            })
-        }
-
         // ================= MP3 =================
         else if (body.startsWith(".mp3")) {
             let url = body.replace(".mp3 ", "")
